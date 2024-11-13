@@ -17,11 +17,8 @@ public class Enunciado1 {
         instrucoes = 7;
         int hLen = haystack.length();
         int nLen = needle.length();
-        if (hLen == nLen) {
-            return 0;  
-        }
         instrucoes += 5;
-        for (int i = 0; i <= hLen - nLen; i++) {
+        for (int i = 0; i <= hLen - nLen; i++) { // O(n^2) ?
             iteracoes++;
             int j = 0;
             boolean match = haystack.charAt(i) == needle.charAt(j);
