@@ -16,12 +16,14 @@ public class Enunciado2 {
 
     public int indexOf(String haystack, String needle) {
         iteracoes = 0;
+        instrucoes = 0;
         int M = haystack.length();
         int N = needle.length();
         long needHash = needle.hashCode();
         
         for (int i = 0; i <= M - N; i++) {
             iteracoes++;
+            iteracoes += N;
             long hash = Objects.hashCode(haystack.substring(i, i + N));
             if (needHash == hash) {
                 return i;
